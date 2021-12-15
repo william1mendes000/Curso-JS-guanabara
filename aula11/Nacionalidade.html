@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nacionalidade</title>
+
+</head>
+<body>
+	<h2>Por favor, informe o seu país:</h2>
+	<input type="text" id="pais">
+	<input type="button" id="verificar" value="Verificar" onclick="country()">
+	<div id="res"></div>
+
+	<script>
+		function country() {
+			var pais = window.document.getElementById('pais')
+			var res = window.document.getElementById('res')
+			var trans = String(pais.value)
+
+			res.innerHTML = `Sua resposta é ${trans}, `
+
+			if (trans == "Brasil" || trans == "brasil" || trans == "BRASIL") {
+				res.innerHTML += `Você é brasileiro!!`
+			} else {
+				res.innerHTML += `Você é estrangeiro!!`
+			}
+		}
+	</script>
+	
+</body>
+</html>
